@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
-    android:background="@color/calculator_background">
+    android:background="@color/calculator_background"
+    tools:ignore="HardcodedText">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -43,7 +44,8 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="2dp"
-        android:background="@color/teal_700"/>
+        android:background="@color/teal_700"
+        android:layout_marginBottom="12dp"/>
 
     <LinearLayout
         style="@style/btnRow">
@@ -153,6 +155,7 @@
             android:text=","/>
 
         <Button
+            android:id="@+id/btnEqual"
             style="@style/btnOperator"
             android:text="="/>
 
