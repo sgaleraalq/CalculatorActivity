@@ -36,21 +36,11 @@ class MainActivity : ComponentActivity() {
     }
 
     // Calculator functions
+
+    // Private functions
     
     private fun setResultTextView(){
         tvResult.text = "0"
-    }
-
-    fun pressNumber(view:View){
-        if (view is Button){
-            tvOperation.text = view.text
-        }
-    }
-
-    fun pressOperator(view:View){
-        if (view is Button && tvOperation.text.isNotEmpty()){
-            tvOperation.text = view.text
-        }
     }
 
     private fun clearEverything(){
@@ -61,6 +51,21 @@ class MainActivity : ComponentActivity() {
     private fun calculate(): String {
         var result = 0
         return result.toString()
+    }
+
+
+    // Non-private functions --> Accessible from layout
+    
+    fun pressNumber(view:View){
+        if (view is Button){
+            tvOperation.text = view.text
+        }
+    }
+
+    fun pressOperator(view:View){
+        if (view is Button && tvOperation.text.isNotEmpty()){
+            tvOperation.text = view.text
+        }
     }
 
 }
