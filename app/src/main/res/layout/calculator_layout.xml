@@ -17,19 +17,19 @@
         android:padding="20dp">
 
         <TextView
-            android:id="@+id/tvResult"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="70sp"
-            app:layout_constraintBottom_toTopOf="@+id/tvOperation"
+            android:id="@+id/tvOperation"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:textSize="50sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/tvResult"
             app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginBottom="20dp"
             tools:text="PRUEBA"
-            android:textAlignment="textEnd"/>
+            android:gravity="bottom|right"/>
 
         <TextView
-            android:id="@+id/tvOperation"
+            android:id="@+id/tvResult"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="30sp"
@@ -51,16 +51,25 @@
         style="@style/btnRow">
 
         <Button
-            style="@style/btnOperator"
+            android:id="@+id/btnClear"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/rounded_button"
+            android:textSize="25sp"
+            android:layout_marginRight="8dp"
+            android:textColor="#FF5722"
             android:text="C"/>
 
         <Button
             style="@style/btnOperator"
-            android:text="()"/>
+            android:text=" ⌫"/>
 
         <Button
-            style="@style/btnOperator"
-            android:text="%"/>
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:background="@color/calculator_background"
+            android:layout_marginRight="8dp"
+            android:text=""/>
 
         <Button
             style="@style/btnOperator"
