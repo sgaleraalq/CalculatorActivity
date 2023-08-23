@@ -19,10 +19,24 @@ class MainActivity : ComponentActivity() {
         initUI()
     }
 
+    // Initalization functions
+    
     private fun initUI(){
         setResultTextView()
     }
 
+    private fun initComponents(){
+        tvOperation = findViewById(R.id.tvOperation)
+        tvResult = findViewById(R.id.tvResult)
+        btnEqual = findViewById(R.id.btnEqual)
+    }
+
+    private fun initListeners(){
+        btnEqual.setOnClickListener { calculate() }
+    }
+
+    // Calculator functions
+    
     private fun setResultTextView(){
         tvResult.text = "0"
     }
@@ -38,15 +52,6 @@ class MainActivity : ComponentActivity() {
             tvOperation.text = view.text
         }
     }
-    private fun initComponents(){
-        tvOperation = findViewById(R.id.tvOperation)
-        tvResult = findViewById(R.id.tvResult)
-        btnEqual = findViewById(R.id.btnEqual)
-    }
-
-    private fun initListeners(){
-        btnEqual.setOnClickListener { calculate() }
-    }
 
     private fun clearEverything(){
         tvOperation.text = ""
@@ -55,7 +60,6 @@ class MainActivity : ComponentActivity() {
 
     private fun calculate(): String {
         var result = 0
-
         return result.toString()
     }
 
