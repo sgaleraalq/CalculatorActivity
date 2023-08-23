@@ -61,8 +61,14 @@
             android:text="C"/>
 
         <Button
-            style="@style/btnOperator"
-            android:text=" ⌫"/>
+            android:id="@+id/btnBackspace"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/rounded_button"
+            android:textSize="25sp"
+            android:layout_marginRight="8dp"
+            android:textColor="#FF5722"
+            android:text="⌫"/>
 
         <Button
             android:layout_width="80dp"
